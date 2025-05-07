@@ -1,0 +1,272 @@
+/* Base Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+}
+
+  html, body {
+    width: 100%;
+    height: 100%;
+    font-family: 'Be Vietnam Pro', sans-serif;
+    overflow-x: hidden;
+    
+  }
+  
+  body {
+    background: url('Pictures/parallax-bg.png') no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+  }
+  
+  section {
+    scroll-margin-left: 250px; /* Match your sidebar width */
+    scroll-margin-top: 80px;   /* Match your navbar height */
+  }
+  
+  /* Navbar */
+  .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+    z-index: 1000;
+    box-sizing: border-box;
+  }
+  
+  .logo-link {
+    text-decoration: none;
+  }
+  
+  .logo {
+    font-size: 35px;
+    color: white;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  
+  .logo:hover {
+    transform: scale(1.1);
+  }
+  
+  /* Social Icons */
+  .social-icons {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+  }
+  
+  .icon-img {
+    width: 30px;
+    height: 30px;
+    filter: brightness(0) invert(1);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    opacity: 0.8;
+    cursor: pointer;
+  }
+  
+  .icon-img:hover {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+
+  .icon-blue {
+    filter: brightness(0) saturate(100%) invert(47%) sepia(99%) saturate(559%) hue-rotate(138deg) brightness(91%) contrast(85%);
+  }
+  
+  
+  /* Hero Section */
+  .hero {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 60px;
+    text-align: center;
+  }
+  
+  .content h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+  }
+  
+  .content p {
+    font-size: 18px;
+  }
+  
+  /* Fade-in animation */
+  @keyframes slideInRight {
+    0% {
+      opacity: 0;
+      transform: translateX(50px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  .fade-in-right {
+    opacity: 0;
+    animation: slideInRight 1.2s ease-out forwards;
+  }
+  
+  .about-split-section {
+    display: flex;
+    min-height: 100vh;
+    margin-left: 250px; /* match sidebar */
+    background-color: white;
+    color: #333;
+    box-sizing: border-box;
+    flex-wrap: wrap; /* allows better behavior on smaller screens */
+  }
+  
+  
+  .about-left, .about-right {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 60px;
+    box-sizing: border-box;
+  }
+  
+  /* Left side with large title */
+  .about-left {
+    background-color: #0ABAB5; /* or whatever color vibe you like */
+    color: white;
+    font-size: 48px;
+    font-weight: bold;
+  }
+  
+  /* Right side with text info */
+  .about-right {
+    font-size: 18px;
+    line-height: 1.6;
+    text-align: left;
+  }
+  
+  .projects-section, .experience-section {
+    padding: 100px 60px;
+    background-color: #f5f5f5;
+    color: #333;
+    text-align: left;
+  }
+  
+  .projects-section h2,
+  .experience-section h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #0ABAB5;
+  }
+  
+  .projects-content p,
+  .experience-content p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+  
+  .card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+  }
+  
+  .card {
+    background: white;
+    color: #333;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    max-width: 350px;
+    flex: 1 1 300px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .card h3 {
+    margin-bottom: 10px;
+    color: #0ABAB5;
+  }
+  
+  .card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Sidebar */
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100vh;
+    background-color: transparent; /* transparent background */
+    padding-top: 100px;
+    z-index: 999;
+  }
+  
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+.sidebar ul li {
+  margin-bottom: 30px;
+}
+
+.sidebar ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.sidebar ul li a:hover {
+  color: #0ABAB5;
+}
+
+/* Push all sections to the right of the sidebar */
+.about-split-section,
+.projects-section,
+.experience-section {
+  margin-left: 250px;
+}
+
+
+@media screen and (max-width: 768px) {
+  .about-split-section,
+  .projects-section,
+  .experience-section {
+    margin-left: 0;
+  }
+
+  .sidebar {
+    display: none;
+  }
+
+  body {
+    margin-left: 0;
+  }
+}
+
+.icon-blue {
+  filter: brightness(0) saturate(100%) invert(47%) sepia(99%) saturate(559%) hue-rotate(138deg) brightness(91%) contrast(85%);
+}
+
