@@ -3,103 +3,58 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Rick Unite</title>
-  <link href="https://fonts.googleapis.com/css?family=Be+Vietnam+Pro" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+    rel="stylesheet">
+  <title>Rick website</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <!-- Top Navbar -->
-  <div class="navbar">
-    <a href="#top" class="logo-link">
-      <h2 class="logo">Rick Unite</h2>
-    </a>
-
-    <div class="social-icons">
-      <a href="https://github.com/ryghoul" target="_blank">
-        <img src="Pictures/github-white.png" alt="GitHub" class="icon-img" id="github-icon" />
-      </a>
-      <a href="https://www.linkedin.com/in/rick-jeiden-unite-505157187" target="_blank">
-        <img src="Pictures/linkedin-white.png" alt="LinkedIn" class="icon-img" id="linkedin-icon" />
-      </a>
-      <a href="https://instagram.com/_sic.rick_" target="_blank">
-        <img src="Pictures/instagram-white.png" alt="Instagram" class="icon-img" id="instagram-icon" />
-      </a>
-      
-    </div>
+  <!-- 1) VIDEO HERO AT TOP -->
+  <div class="video-wrapper">
+    <video autoplay muted loop playsinline id="background-video">
+      <source src="Pictures/background-video.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <div class="video-overlay"></div>
   </div>
 
+  <!-- 2) NAVBAR (fixed on scroll) -->
+  <header id="navbar">
+    <nav>
+      <ul>
+        <li><a href="#home">home</a></li>
+        <li><a href="#about">about</a></li>
+        <li><a href="#education">education</a></li>
+        <li><a href="#projects">projects</a></li>
+      </ul>
+    </nav>
+  </header>
 
-<!-- SIDE BAR -->
-  <div class="sidebar">
-    <ul>
-      <li><a href="#about">About</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#experience">Experience</a></li>
-    </ul>
-  </div>
-  
+  <!-- 3) ALL YOUR TEXTUAL CONTENT STARTS HERE -->
+  <main>
+    <!-- if you want a dedicated “home/about” section -->
+    <section id="home">
+      <h1>about</h1>
+      <p>Some words and then some more other words</p>
+    </section>
 
-  <!-- Hero Section -->
-  <section class="hero" id="top">
-    <div class="content">
-        <h1 class="fade-in-right">Hello, I am Rick!</h1>
-        <p class="fade-in-right" style="animation-delay: 0.4s;">Welcome to my website!</p>
-    </div>
-  </section>
-
-
-  <!-- About Section -->
-  <section class="about-split-section" id="about">
-    <div class="about-left">
-      <h2>About</h2>
-    </div>
-    <div class="about-right">
+    <section id="mission">
+      <h2>Title</h2>
       <p>
-        I’m Rick Unite — a 3rd-year Electrical and Computer Engineering major at Cal Poly Pomona with senior standing. I've interned at Marathon Petroleum for two years, led a Disney Imagineering competition team, and I'm currently on the board for Inner Essence, a dance team. I'm passionate about hardware, clean energy, and creative tech solutions.
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua..."
       </p>
-    </div>
-  </section>
+    </section>
 
-  <!-- Projects Section -->
-  <section class="projects-section" id="projects">
-    <h2>Projects</h2>
-    <div class="card-container">
-      <div class="card">
-        <h3>FPGA Pong Game</h3>
-        <p>A Verilog-based pong-style animation using VGA output on the Nexys A7 FPGA board.</p>
-      </div>
-      <div class="card">
-        <h3>ADC UART Display</h3>
-        <p>Microcontroller-based voltage monitor that displays live values via UART serial output.</p>
-      </div>
-      <div class="card">
-        <h3>Personal Website</h3>
-        <p>This interactive, animated portfolio site built with HTML, CSS, and JavaScript.</p>
-      </div>
-    </div>
-  </section>
+    <!-- add more sections as needed -->
+  </main>
+
+  <!-- 4) FOOTER -->
+  <footer>
+    <p>Rick Unite<br>Thank you for viewing my website!</p>
+  </footer>
   
-
-<!-- Work Experience Section -->
-<section class="experience-section" id="experience">
-  <h2>Work Experience</h2>
-  <div class="card-container">
-    <div class="card">
-      <h3>Marathon Petroleum Company</h3>
-      <p><strong>Electrical Engineering Intern (2 Years)</strong><br />
-         Designed and maintained automation systems in refinery environments.</p>
-    </div>
-    <div class="card">
-      <h3>Disney Imagineering Competition</h3>
-      <p><strong>Team Lead – Engineering & Story</strong><br />
-         Created immersive experiences with sensor-based interactivity.</p>
-    </div>
-  </div>
-</section>
-
-
-  
-
+  <script src="script.js"></script>
 </body>
 </html>
