@@ -3,16 +3,17 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
-    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+
   <title>Rick website</title>
   <link rel="stylesheet" href="style.css" />
+  
 </head>
 <body>
 
   <!-- 1) VIDEO HERO AT TOP -->
-  <div class="video-wrapper">
+  <div id="home" class="video-wrapper">
     <video autoplay muted loop playsinline id="background-video">
       <source src="Pictures/background-video.mp4" type="video/mp4">
       Your browser does not support the video tag.
@@ -20,34 +21,210 @@
     <div class="video-overlay"></div>
   </div>
 
+<!-- NAME APPEARS IN CENTER -->
+  <div class="hero-text">"Engineering Creativity into Reality"</div>
+
+
   <!-- 2) NAVBAR (fixed on scroll) -->
-  <header id="navbar">
+  <header id="navbar" >
+    
     <nav>
-      <ul>
-        <li><a href="#home">home</a></li>
-        <li><a href="#about">about</a></li>
-        <li><a href="#education">education</a></li>
-        <li><a href="#projects">projects</a></li>
-      </ul>
+      <!-- main menu -->
+    <ul class="main-menu">
+      <li><a href="#home">home</a></li>
+      <li><a href="#about">about</a></li>
+      <li><a href="#education">education</a></li>
+      <li><a href="#work">work</a></li>
+      <li><a href="#projects">projects</a></li>
+    </ul>
+
+    <!-- social icons -->
+    <ul class="social-menu">
+      <li><a href="https://instagram.com/_sic.rick_" target="_blank" rel="noopener">
+        <img src="Pictures/instagram-white.png" alt ="Instagram" class="icon">
+      </a></li>
+      <li><a href="https://github.com/ryghoul" target="_blank" rel="noopener">
+        <img src="Pictures/github-white.png" alt="GitHub" class="icon">
+      </a></li>
+      <li><a href="https://www.linkedin.com/in/rick-jeiden-unite-505157187/" target="_blank" rel="noopener">
+        <img src="Pictures/linkedin-white.png" alt="LinkedIn" class="icon">
+      </a></li>
+    </ul>
     </nav>
   </header>
 
   <!-- 3) ALL YOUR TEXTUAL CONTENT STARTS HERE -->
   <main>
-    <!-- if you want a dedicated “home/about” section -->
-    <section id="home">
-      <h1>about</h1>
-      <p>Some words and then some more other words</p>
+    <!-- ABOUT SECTION -->
+    <section id="about" class="about-section">
+      <div class="about-container">
+        <img src="Pictures/about.jpg" alt="About Rick Unite" class="about-img">
+        <div class="about-text">
+          <h2>about me</h2>
+      <p>Hi! My name is Rick Unite! I’m Filipino born and raised in the South Bay of California. I'm a super big Star Wars fan. In my free time I like to play games and listen to music. I am currently attending Cal Poly Pomona for my degree in Computer Engineering! I love to dance, I've danced on a various teams, notably Team Millennia and Inner Essence! I enjoy partaking in little side projects to express my creativity whether it be through technology or artistically.</p>
+        </div>
+      </div>
     </section>
 
-    <section id="mission">
-      <h2>Title</h2>
-      <p>
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua..."
+    <!-- EDUCATION SECTION -->
+    <section id="education" class="education-section">
+      <div class="education-container">
+        <div class="education-text">
+          <h2>education</h2>
+          <p>
+        I attended Cal Poly Pomona studying my Bachelor’s in Computer Engineering! I decided to do Computer Engineering because I was very interested in working with Computer Science software, but I also liked working with the hardware of Electrical Engineering. I took various classes such as Digital Verilog Design, Control Systems Engineering, Electrical Circuit Analysis. My favorite class was Microelectronics, dealing with diodes, transistors and BJTs.
       </p>
-    </section>
+    </div>
+    <img src="Pictures/cpp.png" alt="C++ Logo" class="education-img">
+  </div>
+</section>
 
-    <!-- add more sections as needed -->
+<!-- WORK SECTION-->
+<section id="work" class="work-section">
+  <div class="work-container">
+    <div class="work-images">
+      <img src="Pictures/work1.jpg" alt="Work image 1" class="work-img">
+      <img src="Pictures/work2.png" alt="Work image 2" class="work-img">
+      <img src="Pictures/work3.png" alt="Work image 3" class="work-img">
+    </div>
+    <div class="work-text">
+      <h2>work</h2>
+  <p>I’ve been through various workplaces. My first job was the Summer Youth at Marathon in 2021 where I worked in the Ops Excellence Department. My second job was at Uncle Tetsu in 2023 working as a Bakers Assistant where I baked Japanese cheesecakes and sold cakes to customers. At the end of the year in 2023, I got rehired back at Marathon as a Computer Systems Administrator. In July 2024, I started interning at LMNL Dance Studio as one of their video editors. LMNL Space and Marathon are places that I currently work at.</p>
+    </div>
+  </div>
+</section>
+
+  <!-- PROJECTS SECTION-->
+<section id="projects" class="projects-section">
+  <h2>projects</h2>
+  <div class="projects-container">
+
+    <!-- wrap a card + its modal in one item -->
+    <div class="project-item">
+      <div class="project-card" data-modal-id="modal1">
+        <img src="Pictures/project1.jpg" class="project-img" alt="…">
+        <div class="project-info">
+          <h3>Disney Imagineer Competition</h3>
+          <p>Lead on Disney Imagineer Competition 2024</p>
+        </div>
+      </div>
+
+      <!-- Project Main Info -->
+      <div id="modal1" class="project-modal">
+        <div class="modal-content">
+          <button class="modal-close">&times;</button>
+          <h3>Disney Imagineer Competition</h3>
+          <p>Participated in a Disney Imagineer Competition. I participated with my friends Joseph Kim and Claire Ku. We designed a company called LAPS. The purpose of the app was to better the structure of the public transport system within LA! We would have various hubs that would connect to a main hub. Shuttles were used to connect these hubs to conduct easier transport within the busy city and reduce traffic. This would lead to less carbon emission within our atmosphere and overall a more happier, public transport efficient city. I was in charge of the 3D model design of the trains and the app configuration, Claire created all the drawings of where our hubs would be and found their proper locations in correlation with an IRL map, and Joe created our project proposal/story.</p>
+          <div class="modal-gallery">
+            <img src="Pictures/project1-6.png" alt="">
+            <img src="Pictures/project1-3.png" alt="">
+            <img src="Pictures/project1-4.png" alt="">
+            <img src="Pictures/project1-5.png" alt="">
+            <img src="Pictures/project1-7.jpg" alt="">
+            <img src="Pictures/project1-8.jpg" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+
+  <!-- Project #2 -->
+  <div class="project-item">
+    <div class="project-card" data-modal-id="modal2">
+      <img src="Pictures/project2.jpg" class="project-img" alt="…">
+      <div class="project-info">
+        <h3>FPGA Doodle Jump</h3>
+        <p>Created Doodle Jump on a Nexus A7 100T</p>
+      </div>
+    </div>
+
+    <!-- Project Main Info -->
+    <div id="modal2" class="project-modal">
+      <div class="modal-content">
+        <button class="modal-close">&times;</button>
+        <h3>FPGA Doodle Jump</h3>
+        <p>Here’s a deeper dive…</p>
+        <div class="modal-gallery">
+          <img src="Pictures/project1-1.png" alt="">
+          <img src="Pictures/project1-2.png" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Project #3 -->
+  <div class="project-item">
+    <div class="project-card" data-modal-id="modal3">
+      <img src="Pictures/project3.jpg" class="project-img" alt="…">
+      <div class="project-info">
+        <h3>Personal Computer Build</h3>
+        <p>Built my own computer</p>
+      </div>
+    </div>
+
+    <!-- Project Main Info -->
+    <div id="modal3" class="project-modal">
+      <div class="modal-content">
+        <button class="modal-close">&times;</button>
+        <h3>Personal Computer Build</h3>
+        <p>Here is my personal computer that I built! This is the 3rd computer I’ve built. I have gotten used to the process by now. I’m running a dual boot using GRUB to use Arch Linux and Windows!</p>
+        <p>Specs: Ryzen 9 7900X, RTX 3070 Suprim, 32GB DDR5 TForce RAM, EVGA 1000W PSU, 1TB M.2. SSD, 8 TB HDD</p>
+        <div class="modal-gallery">
+          <img src="Pictures/project3.jpg" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Project #4 -->
+  <div class="project-item">
+    <div class="project-card" data-modal-id="modal4">
+      <img src="Pictures/train.png" class="project-img" alt="…">
+      <div class="project-info">
+        <h3>Microcontrollers Stoplight</h3>
+        <p>Brief description…</p>
+      </div>
+    </div>
+
+    <!-- now outside the card -->
+    <div id="modal4" class="project-modal">
+      <div class="modal-content">
+        <button class="modal-close">&times;</button>
+        <h3>Microcontrollers Stoplight</h3>
+        <p>Here’s a deeper dive…</p>
+        <div class="modal-gallery">
+          <img src="Pictures/project1-1.png" alt="">
+          <img src="Pictures/project1-2.png" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Project #5 -->
+  <div class="project-item">
+    <div class="project-card" data-modal-id="modal5">
+      <img src="Pictures/train.png" class="project-img" alt="…">
+      <div class="project-info">
+        <h3>Iris Chatbot</h3>
+        <p>Brief description…</p>
+      </div>
+    </div>
+
+    <!-- now outside the card -->
+    <div id="modal5" class="project-modal">
+      <div class="modal-content">
+        <button class="modal-close">&times;</button>
+        <h3>Iris Chatbot</h3>
+        <p>Here’s a deeper dive…</p>
+        <div class="modal-gallery">
+          <img src="Pictures/project1-1.png" alt="">
+          <img src="Pictures/project1-2.png" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  </div>
+</section>
   </main>
 
   <!-- 4) FOOTER -->
