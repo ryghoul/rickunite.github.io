@@ -490,6 +490,7 @@ section {
 .project-item:nth-child(3) .project-card { transform: translateX(50px);  }
 .project-item:nth-child(4) .project-card { transform: translateY(50px);  }
 .project-item:nth-child(5) .project-card { transform: translateX(-50px); }
+.project-item:nth-child(6) .project-card { transform: translateX(-50px); }
 
 /* When .projects-section has .visible, slide them into place */
 .projects-section.visible .project-item:nth-child(1) .project-card {
@@ -516,6 +517,11 @@ section {
   opacity: 1;
   transform: translateX(0);
   transition-delay: 1.2s;
+}
+.projects-section.visible .project-item:nth-child(6) .project-card {
+  opacity: 1;
+  transform: translateX(0);
+  transition-delay: 1.4s;
 }
 
 
